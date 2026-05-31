@@ -1,0 +1,4 @@
+export enum Queues {
+    DAILY_SALES_REPORT = 'DAILY_SALES_REPORT',
+    EMAIL_QUEUE = 'EMAIL_QUEUE',
+}

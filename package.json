@@ -1,0 +1,42 @@
+{
+  "name": "payever-assessment",
+  "version": "1.0.0",
+  "description": "PayEver microservices assessment",
+  "scripts": {
+    "lint": "npm run lint:invoice && npm run lint:email",
+    "lint:invoice": "cd invoice-service && npm run lint",
+    "lint:email": "cd email-service && npm run lint",
+    "format": "npm run format:invoice && npm run format:email",
+    "format:invoice": "cd invoice-service && npm run format",
+    "format:email": "cd email-service && npm run format",
+    "test": "npm run test:invoice && npm run test:email",
+    "test:invoice": "cd invoice-service && npm test",
+    "test:email": "cd email-service && npm test",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0"
+  },
+  "lint-staged": {
+    "invoice-service/src/**/*.ts": [
+      "npm run lint:invoice"
+    ],
+    "email-service/src/**/*.ts": [
+      "npm run lint:email"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/payever-assessment.git"
+  },
+  "keywords": [
+    "nestjs",
+    "microservices",
+    "docker",
+    "rabbitmq",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "MIT"
+} 
