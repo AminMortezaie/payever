@@ -1,4 +1,4 @@
-# PayEver Microservices Assessment
+# PayEver Microservices
 
 This project consists of two microservices that work together to process invoices and send email notifications.
 
